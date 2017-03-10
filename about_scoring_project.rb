@@ -48,7 +48,7 @@ def triple(number)
   number == 1 ? 1000 : 100 * number
 end
 
-
+#Needs code refractoring 
 
 class AboutScoringProject < Neo::Koan
   def test_score_of_an_empty_list_is_zero
