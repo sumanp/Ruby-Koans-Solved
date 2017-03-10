@@ -14,12 +14,24 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
+  if a == 0 && b == 0 && c == 0
+    raise TriangleError, "Don't be a Zero!"
+  end
+
+  if a < 0 || b < 0 || c < 0
+    raise TriangleError, "Please be positive!"
+  end
+
+  if a + b <= c || a + c <= b || c + b <= a
+    raise TriangleError, "Illegal triangle"
+  end
+
   if a == b && b == c
-    return :equilateral
+    :equilateral
   elsif a != b && b!= c && a != c
-    return :scalene
+    :scalene
   else
-    return :isosceles
+    :isosceles
   end
 end
 
